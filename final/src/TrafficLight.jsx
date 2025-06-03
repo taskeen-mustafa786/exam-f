@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-function App() {
+function TrafficLight() {
   const [count, setCount] = useState(0)
 
   useEffect(()=>{
@@ -26,6 +26,6 @@ function App() {
   )
 }
 
-export default App
+export default TrafficLight;
 
 
