@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 // Use the provided GIF to observe:
@@ -16,7 +16,17 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  
+  useEffect({
+    // Set an interval to change the light every 3 seconds
+    const interval = setInterval(() => {
+      setCount(prevCount => (prevCount + 1) % 3)
+    }, 3000)
+
+    // Clear the interval on component unmount
+    return () => clearInterval(interval)
+
+
+  },[count])
 
   return (
     <>
