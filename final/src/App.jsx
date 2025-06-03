@@ -1,18 +1,49 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+
+// Use the provided GIF to observe:
+// The sequence of light changes (Red → Yellow → Green → Red...)
+// Each light stays active for 3 seconds
+// Only one light is active at a time
+// Smooth transitions and style
+
+//  Light Logic
+// Use useState to track the current light (red/yellow/green)
+// Use useEffect with setInterval to change light every 3 seconds
+// Apply active CSS class to the current light
+
 
 function App() {
   const [count, setCount] = useState(0)
 
+  
+
   return (
     <>
-      <div className=''>
-        
+      <div className='bg-gray-800 p-4 rounded-2xl'>
+        <div className={`bg-red-600 rounded-full h-12 w-12 p-2 m-2 `}></div>
+        <div className={`bg-yellow-600 rounded-full h-12 w-12 p-2 m-2 `}></div>
+        <div className={`bg-green-600 rounded-full h-12 w-12 p-2 m-2 `}></div>
       </div>
     </>
   )
 }
 
 export default App
+
+// Commit # Commit Message
+// Initial commit: add static HTML and CSS
+// for traffic light
+// Refactor: convert to functional React
+// component
+// Feature: implement light cycle logic 3
+// with useEffect
+// Style: enhance UI with transitions and 4
+// active styles
+// Task
+// Setup project and layout (3
+// lights, no logic)
+// JSX structure for lights, apply
+// classes
+// Cycle lights every 3s using state
+// + effect
