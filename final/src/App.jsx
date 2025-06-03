@@ -16,8 +16,8 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  useEffect({
-    // Set an interval to change the light every 3 seconds
+  useEffect(()=>{
+    
     const interval = setInterval(() => {
       setCount(prevCount => (prevCount + 1) % 3)
     }, 3000)
