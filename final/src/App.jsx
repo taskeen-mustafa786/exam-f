@@ -31,9 +31,9 @@ function App() {
   return (
     <>
       <div className='bg-gray-800 p-4 rounded-2xl'>
-        <div className={`bg-red-600 rounded-full h-12 w-12 p-2 m-2 `}></div>
-        <div className={`bg-yellow-600 rounded-full h-12 w-12 p-2 m-2 `}></div>
-        <div className={`bg-green-600 rounded-full h-12 w-12 p-2 m-2 `}></div>
+        <div className={` rounded-full h-12 w-12 p-2 m-2 ${count==1?'bg-red-600':'bg-gray-600'}`}></div>
+        <div className={` rounded-full h-12 w-12 p-2 m-2 ${count==2?'bg-red-600':'bg-gray-600'}`}></div>
+        <div className={` rounded-full h-12 w-12 p-2 m-2 ${count==3?'bg-red-600':'bg-gray-600'} `}></div>
       </div>
     </>
   )
